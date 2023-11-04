@@ -5,6 +5,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Rooms from "../Pages/Rooms/Rooms";
 import MyBookings from "../Pages/MyBookings/MyBookings";
 import Register from "../Pages/Register/Register";
+import Gallery from "../Pages/Home/Gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/gallery',
+                element:<Gallery></Gallery>
             }
         ]
     }
