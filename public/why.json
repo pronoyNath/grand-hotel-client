@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "title": "Elegant Accommodations",
+      "description": "Experience the epitome of luxury in our well-appointed rooms and suites. Each room is elegantly designed to provide a comfortable and stylish stay.",
+      "img": "https://i.ibb.co/LrxcxD2/spa.png"
+    },
+    {
+      "id": 2,
+      "title": "Fine Dining",
+      "description": "Savor delectable culinary delights in our on-site restaurants. Our expert chefs prepare a range of exquisite dishes to tantalize your taste buds.",
+      "img": "https://i.ibb.co/hW3Ktrd/dining-table.png"
+    },
+    {
+      "id": 3,
+      "title": "Relaxation and Wellness",
+      "description": "Unwind and rejuvenate at our spa and wellness center. Enjoy a variety of treatments, from massages to yoga sessions, to ensure your well-being during your stay.",
+      "img": "https://i.ibb.co/GJzD2q8/music-therapy.png"
+    }
+  ]
+  
