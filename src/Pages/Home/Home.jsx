@@ -1,3 +1,4 @@
+import Map from "../../Components/Map/Map";
 import Banner from "./Banner/Banner";
 import Gallery from "./Gallery/Gallery";
 import WhyOurHotel from "./WhyOurHotel/WhyOurHotel";
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <WhyOurHotel></WhyOurHotel>
             <Gallery></Gallery>
+            <Map></Map>
             hello world
         </div>
     );
