@@ -3,8 +3,8 @@ import Navbar from "../SharedComponents/Navbar/Navbar";
 
 const MainLayout = () => {
     return (
-        <div>
-            <div className="bg-[#33302e] py-2">
+        <div className="">
+            <div className="absolute top-0 w-full py-2">
                 <Navbar></Navbar>
             </div>
             <Outlet></Outlet>
