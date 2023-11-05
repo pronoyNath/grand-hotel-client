@@ -3,7 +3,7 @@ const Map = () => {
         <div className="flex flex-row-reverse py-20 ">
             <div className="inline-flex flex-col justify-center items-center p-10 bg-[#0f172b] text-white">
                 <h3 className="font-semibold text-3xl mb-5">Location: Grand Hotel Rangpur</h3>
-                <p className="text-xl">Situated at the heart of the vibrant city of Rangpur, our grand hotel stands tall on a sprawling campus with a panoramic view of the picturesque Rangpur River. The hotel occupies the top 10 floors of an iconic tower, making it a true symbol of luxury and prestige in the area.
+                <p className="text-lg">Situated at the heart of the vibrant city of Rangpur, our grand hotel stands tall on a sprawling campus with a panoramic view of the picturesque Rangpur River. The hotel occupies the top 10 floors of an iconic tower, making it a true symbol of luxury and prestige in the area.
 
                     Conveniently located in close proximity to the thriving textile industry, our guests enjoy the perfect blend of business and leisure. With lush green gardens and the enchanting Rangpur Botanical Park just a stone's throw away, our location is a gateway to tranquility in the midst of urban sophistication.
 
