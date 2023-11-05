@@ -13,7 +13,7 @@ const Navbar = () => {
             <NavLink
                 to="/"
                 className={({ isActive }) =>
-                     isActive ? "active px-2 py-1 rounded flex items-center bg-[#dbb878]" : ""
+                     isActive ? "active px-2 py-1 rounded flex items-center border-b-4 border-[#dbb878] " : ""
                 }
             >
                 Home
@@ -24,7 +24,7 @@ const Navbar = () => {
             <NavLink
                 to="/rooms"
                 className={({ isActive}) =>
-                     isActive ? "active px-2 py-1 rounded flex items-center bg-[#dbb878]" : ""
+                     isActive ? "active px-2 py-1 rounded flex items-center  border-b-4 border-[#dbb878] " : ""
                 }
             >
                 Rooms
@@ -35,7 +35,7 @@ const Navbar = () => {
             <NavLink
                 to="/mybookings"
                 className={({ isActive }) =>
-                     isActive ? "active px-2 py-1 rounded flex items-center bg-[#dbb878]" : ""
+                     isActive ? "active px-2 py-1 rounded flex items-center border-b-4 border-[#dbb878] " : ""
                 }
             >
                 My Bookings
@@ -55,9 +55,9 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    {/* <Link to='/'> */}
+                    <Link to='/'>
                     <img src="https://i.ibb.co/pKbGqKV/1.png" className="w-[150px] h-[100px]" alt="" />
-                    {/* </Link> */}
+                    </Link>
                 </div>
                 <div className="navbar hidden lg:flex">
                     <ul className="flex gap-5 px-1">
