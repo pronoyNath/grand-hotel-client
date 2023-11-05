@@ -3,7 +3,7 @@ const HotDeals = () => {
         <div>
             <div className="py-16 text-center max-w-6xl mx-auto">
             <h3 className="font-semibold text-4xl mb-5 text-center">Our Best Deal</h3>
-            <p className="text-lg ">"Experience unparalleled luxury at Grand Hotel with our Best Deal offer. Enjoy exclusive rates, complimentary upgrades, and a host of amenities that will make your stay truly grand. Book now and indulge in the finest hospitality Rangpur has to offer."</p>
+            <p className="text-lg">"Experience unparalleled luxury at Grand Hotel with our Best Deal offer. Enjoy exclusive rates, complimentary upgrades, and a host of amenities that will make your stay truly grand. Book now and indulge in the finest hospitality Rangpur has to offer."</p>
             </div>
             <div className="relative h-[500px] object-cover" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.eef7a82b95e6894e06e0afb908147736?rik=EhwReJ48HH7P3w&pid=ImgRaw&r=0)' }}>
                 <div className="absolute rounded-lg w-full h-full bg-gradient-to-r from-black to-[#dbb878] opacity-30"></div>

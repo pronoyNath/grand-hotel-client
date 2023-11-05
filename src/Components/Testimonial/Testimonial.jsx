@@ -1,10 +1,10 @@
 const Testimonial = () => {
     return (
-        <section className="">
+        <section className="py-16">
             <div className="container mx-auto flex flex-col items-center my-10 pb-6 mb-4 md:p-10 md:px-12" >
                 <h1 className="text-4xl font-semibold leadi text-center">What our customers are saying about us</h1>
             </div>
-            <div className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2 bg-[#dbb878] p-10 " >
+            <div className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2 bg-[#dbb878] max-w-6xl p-10 " >
                 <div className="flex flex-col items-center mx-12 lg:mx-0" >
                     <div className="relative text-center" >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute top-0 left-0 w-8 h-8 dark:text-gray-700">
