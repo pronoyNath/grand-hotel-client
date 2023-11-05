@@ -1,33 +1,34 @@
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 // eslint-disable-next-line react/prop-types
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true);
 
-    const createUser = (email,password)=>{
+    const createUser = (email, password) => {
         setLoading(true);
-       return createUserWithEmailAndPassword(auth,email,password);
+        return createUserWithEmailAndPassword(auth, email, password);
     }
-    const signIn = (email,password)=>{
+    const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(auth,email,password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
-    const logOut = ()=>{
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }
 
     // google account 
-    const googleSignIn = ()=>{
+    const googleSignIn = () => {
         setLoading(true);
-        return signInWithPopup(auth,googleProvider);
+        return signInWithPopup(auth, googleProvider);
     }
 
     // update user profile
@@ -50,17 +51,33 @@ const AuthProvider = ({children}) => {
     }
 
     // onAuth state change
-    useEffect(()=>{
-        const unsubscribe =  onAuthStateChanged(auth,currentUser =>{
-             setUser(currentUser);
-             setLoading(false);
-         });
-         return ()=>{
-             unsubscribe();
-         }
-     },[])
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = { email: userEmail }
 
-  
+            setUser(currentUser);
+            setLoading(false);
+
+            // token creator
+            if (currentUser) {
+                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                    })
+            }
+            else {
+                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
+                    .then(res => console.log('deleted done', res.data))
+            }
+
+        });
+        return () => {
+            unsubscribe();
+        }
+    }, [])
+
+
 
     const authInfo = {
         user,
@@ -72,9 +89,9 @@ const AuthProvider = ({children}) => {
         updateUserProfile
     }
     return (
-       <AuthContext.Provider value={authInfo}>
-        {children}
-       </AuthContext.Provider>
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
     );
 };
 
