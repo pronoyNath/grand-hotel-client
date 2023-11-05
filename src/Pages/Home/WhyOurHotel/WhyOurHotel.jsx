@@ -11,7 +11,6 @@ const WhyOurHotel = () => {
         .then(data=>setFeatures(data))
     },[])
 
-    console.log(features);
     return (
         <div className="my-20 max-w-6xl mx-auto">
             <h3 className="font-semibold text-4xl">Why choose our hotel?</h3>

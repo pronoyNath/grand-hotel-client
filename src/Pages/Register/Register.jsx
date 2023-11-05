@@ -3,6 +3,8 @@ import toast from 'react-hot-toast';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaCircleCheck } from 'react-icons/fa6';
+import registerAnimation from '../../assets/registerAnimation.json'
+import Lottie from 'lottie-react';
 
 const Register = () => {
 
@@ -88,10 +90,14 @@ const Register = () => {
     }
 
     return (
-        <div className="hero min-h-[900px]" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md">
+                <div className="max-w-6xl flex md:gap-5 items-center">
+                <div className="hidden md:block">
+                        <Lottie animationData={registerAnimation}></Lottie>
+                    </div>
+
                     <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-[#1c1c1c] dark:text-gray-100" >
                         <h2 className="mb-3 text-3xl font-semibold text-center">Register to your account</h2>
                         <p className="text-sm text-center dark:text-gray-400">Already have account?

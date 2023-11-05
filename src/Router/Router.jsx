@@ -27,19 +27,20 @@ const router = createBrowserRouter([
                 element: <MyBookings></MyBookings>
             },
             {
-                path: '/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/register',
-                element: <Register></Register>
-            },
-            {
                 path: '/testimonial',
                 element:<Testimonial></Testimonial>
             }
         ]
-    }
+    },
+    
+    {
+        path: '/login',
+        element: <Login></Login>
+    },
+    {
+        path: '/register',
+        element: <Register></Register>
+    },
 ])
 
 export default router;

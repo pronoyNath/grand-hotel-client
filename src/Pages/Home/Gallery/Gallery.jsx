@@ -15,7 +15,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 
 function Gallery() {
     const onInit = () => {
-        console.log('lightGallery has been initialized');
+        // console.log('lightGallery has been initialized');
     };
     return (
             <div className='bg-[#dbb878] py-20 overflow-hidden '>

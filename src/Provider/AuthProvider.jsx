@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             setLoading(false);
 
-            // token creator
+            // token creator(***) & remover
             if (currentUser) {
                 axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
                     .then(res => {
@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
             }
             else {
                 axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
-                    .then(res => console.log('deleted done', res.data))
+                    .then(res => console.log( res.data))
             }
 
         });
