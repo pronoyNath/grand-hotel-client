@@ -1,5 +1,6 @@
 import HotDeals from "../../Components/HotDeals/HotDeals";
 import Map from "../../Components/Map/Map";
+import Testimonial from "../../Components/Testimonial/Testimonial";
 import Banner from "./Banner/Banner";
 import Gallery from "./Gallery/Gallery";
 import WhyOurHotel from "./WhyOurHotel/WhyOurHotel";
@@ -14,6 +15,7 @@ const Home = () => {
             <Gallery></Gallery>
             <Map></Map>
             <HotDeals></HotDeals>
+            <Testimonial></Testimonial>
         </div>
     );
 };

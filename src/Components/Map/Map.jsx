@@ -1,7 +1,7 @@
 const Map = () => {
     return (
         <div className="flex flex-row-reverse py-20 ">
-            <div className="inline-flex flex-col justify-center items-center p-10 bg-[#0f172b] text-white">
+            <div className="inline-flex flex-col justify-center items-center p-10 bg-[#1c1c1c] text-white">
                 <h3 className="font-semibold text-3xl mb-5">Location: Grand Hotel Rangpur</h3>
                 <p className="text-lg">Situated at the heart of the vibrant city of Rangpur, our grand hotel stands tall on a sprawling campus with a panoramic view of the picturesque Rangpur River. The hotel occupies the top 10 floors of an iconic tower, making it a true symbol of luxury and prestige in the area.
 
