@@ -9,6 +9,7 @@ import Gallery from "../Pages/Home/Gallery/Gallery";
 import Map from "../Components/Map/Map";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import HomeSlider from "../Pages/Home/Banner/HomeSlider/HomeSlider";
+import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
             {
                 path: '/slider',
                 element: <HomeSlider></HomeSlider>
+            },
+            {
+                path: '/roomdetails/:id',
+                element: <RoomDetails></RoomDetails>,
+                loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
             }
         ]
     }

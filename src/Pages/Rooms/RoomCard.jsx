@@ -1,19 +1,21 @@
 import React from 'react';
 import HomeSlider from '../Home/Banner/HomeSlider/HomeSlider';
+import { Link } from 'react-router-dom';
 
-const RoomCard = ({room}) => {
-    const { img,
+const RoomCard = ({ room }) => {
+    const { _id,img,
         price,
-            bed,
-            capacity,
-            room_size,
-            view,
-            recommend,
-            short_title,
-            description,
-            availability } = room;
+        bed,
+        capacity,
+        room_size,
+        view,
+        recommend,
+        short_title,
+        description,
+        availability } = room;
     return (
-        <div className="flex gap-10 bg-[#0f172b] border-2 border-[#dbb878]  p-20">
+        <Link to={`/roomdetails/${_id}`}>
+            <div className="flex gap-10 bg-[#0f172b] border-2 border-[#dbb878]  p-20">
                 <div className="flex-1 flex max-w-6xl mx-auto flex-col font-semibold text-white space-y-3 items-center justify-center">
                     <h3 className="text-2xl mb-3">{short_title}</h3>
                     <p className="text-xl">From,</p>
@@ -25,9 +27,10 @@ const RoomCard = ({room}) => {
                     <p className="text-md mt-3">Recommend: {recommend} </p>
                 </div>
                 <div className="flex-1 max-w-3xl">
-                    <HomeSlider></HomeSlider>
+                    <HomeSlider room={room}></HomeSlider>
                 </div>
             </div>
+        </Link>
     );
 };
 

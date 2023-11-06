@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import HomeSlider from "../Home/Banner/HomeSlider/HomeSlider";
 import demoPic from '../../assets/demoPic.jpg'
 import RoomCard from './RoomCard'
@@ -17,7 +17,8 @@ const Rooms = () => {
                     <p className="text-xl font-medium">Unwind the clock of modern life. Unlock the door to a wonder of the world.</p>
                 </div>
             </div>
-            <div>
+        
+           <div>
                 {
                     rooms.map(room=><RoomCard key={room._id} room={room}></RoomCard>)
                 }
