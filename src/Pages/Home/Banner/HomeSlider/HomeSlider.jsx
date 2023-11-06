@@ -21,7 +21,7 @@ export default function HomeSlider({ room }) {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper max-h-[400px]"
+        className="mySwiper max-h-[500px]"
       >
        {room?.img?.map((img, index) => (
           <SwiperSlide key={index}>

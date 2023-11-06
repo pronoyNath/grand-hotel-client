@@ -12,7 +12,8 @@ const RoomCard = ({ room }) => {
         recommend,
         short_title,
         description,
-        availability } = room;
+        availability,
+         } = room;
     return (
         <Link to={`/roomdetails/${_id}`}>
             <div className="flex gap-10 bg-[#0f172b] border-2 border-[#dbb878]  p-20">
