@@ -1,0 +1,133 @@
+[
+    {
+    
+      "img": ["room1_1.jpg", "room1_2.jpg", "room1_3.jpg"],
+      "price": "$199",
+      "bed": "Twin Bed",
+      "capacity": "2 Adults, 1 Child",
+      "room_size": "30m²",
+      "view": "Sea View",
+      "recommend": "Great for Business Trip",
+      "short_title": "Deluxe Sea View Room",
+      "description": "Enjoy a comfortable stay in our Deluxe Sea View Room. This room is perfect for business travelers, offering a beautiful sea view, twin beds, and a spacious 30m² area for your convenience.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room2_1.jpg", "room2_2.jpg", "room2_3.jpg"],
+      "price": "$210",
+      "bed": "King Bed",
+      "capacity": "2 Adults, 2 Children",
+      "room_size": "32m²",
+      "view": "Mountain View",
+      "recommend": "Perfect for Relaxation",
+      "short_title": "Mountain View Retreat",
+      "description": "Experience the serenity of our Mountain View Retreat. This room features a king-sized bed, a stunning mountain view, and a spacious 32m² area, making it perfect for relaxation.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room3_1.jpg", "room3_2.jpg", "room3_3.jpg"],
+      "price": "$185",
+      "bed": "Queen Bed",
+      "capacity": "2 Adults",
+      "room_size": "28m²",
+      "view": "City View",
+      "recommend": "Ideal for City Explorers",
+      "short_title": "Cityscape Deluxe Room",
+      "description": "Enjoy the city vibes in our Cityscape Deluxe Room. This room offers a queen-sized bed, a city view, and a cozy 28m² space, making it ideal for city explorers.",
+      "availability": false
+    },
+    {
+    
+      "img": ["room4_1.jpg", "room4_2.jpg", "room4_3.jpg"],
+      "price": "$225",
+      "bed": "King Bed",
+      "capacity": "2 Adults",
+      "room_size": "35m²",
+      "view": "Garden View",
+      "recommend": "A Romantic Getaway",
+      "short_title": "Garden Oasis Suite",
+      "description": "Indulge in our Garden Oasis Suite, featuring a king-sized bed, a charming garden view, and a spacious 35m² room. It's the perfect choice for a romantic getaway.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room5_1.jpg", "room5_2.jpg", "room5_3.jpg"],
+      "price": "$205",
+      "bed": "Queen Bed",
+      "capacity": "2 Adults, 1 Child",
+      "room_size": "29m²",
+      "view": "Lake View",
+      "recommend": "Great for Family Getaways",
+      "short_title": "Lakeview Family Room",
+      "description": "Our Lakeview Family Room offers a queen-sized bed, a picturesque lake view, and a comfortable 29m² area, making it a great choice for family getaways.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room6_1.jpg", "room6_2.jpg", "room6_3.jpg"],
+      "price": "$190",
+      "bed": "Twin Bed",
+      "capacity": "2 Adults",
+      "room_size": "31m²",
+      "view": "City View",
+      "recommend": "Ideal for Sightseeing",
+      "short_title": "City Explorer's Haven",
+      "description": "Welcome to the City Explorer's Haven, where you can enjoy twin beds, a city view, and a spacious 31m² room. It's the perfect choice for sightseeing enthusiasts.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room7_1.jpg", "room7_2.jpg", "room7_3.jpg"],
+      "price": "$220",
+      "bed": "King Bed",
+      "capacity": "2 Adults, 2 Children",
+      "room_size": "33m²",
+      "view": "Beachfront View",
+      "recommend": "Beach Lovers' Paradise",
+      "short_title": "Beachfront Family Suite",
+      "description": "Experience the Beachfront Family Suite, featuring a king-sized bed, a beachfront view, and a spacious 33m² area. It's a paradise for beach lovers and families.",
+      "availability": true
+    },
+    {
+    
+      "img": ["room8_1.jpg", "room8_2.jpg", "room8_3.jpg"],
+      "price": "$199",
+      "bed": "Twin Bed",
+      "capacity": "2 Adults",
+      "room_size": "30m²",
+      "view": "Garden View",
+      "recommend": "Tranquil Retreat",
+      "short_title": "Garden Escape Room",
+      "description": "Indulge in the Garden Escape Room, offering twin beds, a peaceful garden view, and a spacious 30m² room. It's the perfect choice for a tranquil retreat.",
+      "availability": false
+    },
+    {
+    
+      "img": ["room9_1.jpg", "room9_2.jpg", "room9_3.jpg"],
+      "price": "$215",
+      "bed": "Queen Bed",
+      "capacity": "2 Adults, 1 Child",
+      "room_size": "28m²",
+      "view": "Mountain View",
+      "recommend": "Ideal for Hikers",
+      "short_title": "Mountain Hiker's Haven",
+      "description": "Enjoy a hiking adventure with the Mountain Hiker's Haven, featuring a queen-sized bed, a breathtaking mountain view, and a cozy 28m² space.",
+      "availability": true
+    },
+    {
+      
+      "img": ["room10_1.jpg", "room10_2.jpg", "room10_3.jpg"],
+      "price": "$230",
+      "bed": "King Bed",
+      "capacity": "2 Adults",
+      "room_size": "35m²",
+      "view": "Ocean View",
+      "recommend": "Luxury Beachfront Retreat",
+      "short_title": "Luxury Oceanfront Suite",
+      "description": "Indulge in the Luxury Oceanfront Suite, offering a king-sized bed, a luxurious ocean view, and a spacious 35m² room. It's the perfect choice for a luxury beachfront retreat.",
+      "availability": true
+    }
+  ]
+

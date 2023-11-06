@@ -21,7 +21,7 @@ export default function HomeSlider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper max-h-[600px]"
+        className="mySwiper max-h-[400px]"
       >
         <SwiperSlide>
             <img src="https://hotellerv1.b-cdn.net/apartment/wp-content/uploads/sites/5/2018/06/a-black-and-white-bachelor-pad-in-brooklyn-home-tour-lonny-for-brownstone-apartment-designer-dan-mazzarini-melded-historic-architecture-modern-masculine_hotel-interior-black-and-white_hotel_hotel-desi-1024x683.jpg" alt="" />

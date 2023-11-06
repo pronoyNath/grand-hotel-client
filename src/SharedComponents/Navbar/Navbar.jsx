@@ -76,6 +76,7 @@ const Navbar = () => {
                                     user?.photoURL ? user?.photoURL : "https://i.ibb.co/bghqWpR/user.png"
                                     : "https://i.ibb.co/bghqWpR/user.png"
                                 } />
+                               
                             </div>
                         </label>
 

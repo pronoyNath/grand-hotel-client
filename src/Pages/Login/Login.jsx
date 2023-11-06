@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { FaCircleCheck } from "react-icons/fa6";
 import loginAnimation from '../../assets/loginAnimaiton2.json'
 import Lottie from "lottie-react";
@@ -12,7 +12,7 @@ const Login = () => {
 
     const location = useLocation();
     // console.log(location);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [loginError, setLoginError] = useState('');
 
     const handleLogin = e => {
@@ -54,10 +54,15 @@ const Login = () => {
                         </div>
 
                         <div className="flex border-l border-blue-200">
+                       
+                           
+                        
                             <Link to={`${location?.state ? location.state : '/'}`}>
                                 <button
-                                    onClick={() =>
+                                    onClick={() =>{
+                                        navigate(location?.state ? location?.state : '/')
                                         toast.dismiss(t.id)
+                                    }
                                     }
                                     className="w-full h-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 >
@@ -87,8 +92,8 @@ const Login = () => {
                 //toast pop-up
                 toast.custom((t) => (
                     <div
-                        className={`${t.visible ? 'animate-enter' : 'animate-leave'
-                            } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                        className={`${t.visible ? 'animate-enter ' : 'animate-leave'
+                            } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5 `}
                     >
                         <div className="flex-1 w-0 p-4">
                             <div className="flex items-start">
@@ -129,7 +134,7 @@ const Login = () => {
     console.log(user);
 
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
+            <div className="hero min-h-[800px]" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-6xl flex md:gap-10 items-center">
@@ -176,6 +181,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

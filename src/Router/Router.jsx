@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register";
 import Gallery from "../Pages/Home/Gallery/Gallery";
 import Map from "../Components/Map/Map";
 import Testimonial from "../Components/Testimonial/Testimonial";
+import HomeSlider from "../Pages/Home/Banner/HomeSlider/HomeSlider";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/rooms',
-                element: <Rooms></Rooms>
+                element: <Rooms></Rooms>,
+                loader: ()=>fetch('http://localhost:5000/rooms')
             },
             {
                 path: '/mybookings',
@@ -29,18 +31,21 @@ const router = createBrowserRouter([
             {
                 path: '/testimonial',
                 element:<Testimonial></Testimonial>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/slider',
+                element: <HomeSlider></HomeSlider>
             }
         ]
-    },
-    
-    {
-        path: '/login',
-        element: <Login></Login>
-    },
-    {
-        path: '/register',
-        element: <Register></Register>
-    },
+    }
 ])
 
 export default router;

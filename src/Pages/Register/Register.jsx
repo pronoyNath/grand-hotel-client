@@ -90,10 +90,10 @@ const Register = () => {
     }
 
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
+        <div className="hero min-h-[900px]" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-6xl flex md:gap-5 items-center">
+                <div className="max-w-6xl flex items-center">
                 <div className="hidden md:block">
                         <Lottie animationData={registerAnimation}></Lottie>
                     </div>
