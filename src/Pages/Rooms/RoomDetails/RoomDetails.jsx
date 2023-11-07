@@ -28,26 +28,27 @@ const RoomDetails = () => {
 
     const filterByDate = (dates) => {
         // console.log(new Date(dates[1].$d).toLocaleDateString());
-        const fromDateFormatted = new Date(dates[0].$d).toLocaleDateString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-        });
-        const toDateFormatted = new Date(dates[1].$d).toLocaleDateString('en-GB', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
-        });
-
-        setFormDate(fromDateFormatted);
-        setToDate(toDateFormatted);
-
+       
         // const fromDateFormatted = moment(dates[0]).format('DD-MM-YYYY');
         // const toDateFormatted = moment(dates[1]).format('DD-MM-YYYY');
         // console.log(fromDateFormatted);
         // console.log(toDateFormatted);
+
+
+        const fromDate = new Date(dates[0].$d);
+        const toDate = new Date(dates[1].$d);
+
+        const formattedFromDate = `${fromDate.getDate().toString().padStart(2, '0')}-${(fromDate.getMonth() + 1).toString().padStart(2, '0')}-${fromDate.getFullYear()}`;
+
+        const formattedToDate = `${toDate.getDate().toString().padStart(2, '0')}-${(toDate.getMonth() + 1).toString().padStart(2, '0')}-${toDate.getFullYear()}`;
+
+        // console.log(formattedFromDate);
+        // console.log(formattedToDate);
+
+        setFormDate(formattedFromDate);
+        setToDate(formattedToDate);
     }
-    console.log(fromDate,"-->",toDate);
+    console.log(fromDate, "-->", toDate);
 
 
 
