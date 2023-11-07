@@ -9,7 +9,7 @@
     "recommend": "Great for Business Trip",
     "short_title": "Deluxe Sea View Room",
     "description": "Enjoy a comfortable stay in our Deluxe Sea View Room. This room is perfect for business travelers, offering a beautiful sea view, twin beds, and a spacious 30m² area for your convenience.",
-    
+    "available" : true,
     "special_offer": false,
     "amenities": [
       "40-inch Samsung® LED TV",
@@ -33,7 +33,7 @@
     "recommend": "Perfect for Relaxation",
     "short_title": "Mountain View Retreat",
     "description": "Experience the serenity of our Mountain View Retreat. This room features a king-sized bed, a stunning mountain view, and a spacious 32m² area, making it perfect for relaxation.",
-    
+    "available" : true,
     "special_offer": true,
     "amenities": [
       "40-inch Samsung® LED TV",
@@ -57,7 +57,7 @@
     "recommend": "Ideal for City Explorers",
     "short_title": "Cityscape Deluxe Room",
     "description": "Enjoy the city vibes in our Cityscape Deluxe Room. This room offers a queen-sized bed, a city view, and a cozy 28m² space, making it ideal for city explorers.",
-    
+    "available" : true,
     "special_offer": false,
     "amenities": [
       "40-inch Samsung® LED TV",
@@ -81,7 +81,7 @@
     "recommend": "A Romantic Getaway",
     "short_title": "Garden Oasis Suite",
     "description": "Indulge in our Garden Oasis Suite, featuring a king-sized bed, a charming garden view, and a spacious 35m² room. It's the perfect choice for a romantic getaway.",
-    
+    "available" : true,
     "special_offer": true,
     "amenities": [
       "40-inch Samsung® LED TV",
@@ -100,12 +100,13 @@
     "price": 205,
     "bed": "Queen Bed",
     "capacity": "2 Adults, 1 Child",
+    
     "room_size": "29m²",
     "view": "Lake View",
     "recommend": "Great for Family Getaways",
     "short_title": "Lakeview Family Room",
     "description": "Our Lakeview Family Room offers a queen-sized bed, a picturesque lake view, and a comfortable 29m² area, making it a great choice for family getaways.",
-    
+    "available" : true,
     "special_offer": false,
     "amenities": [
       "40-inch Samsung® LED TV",

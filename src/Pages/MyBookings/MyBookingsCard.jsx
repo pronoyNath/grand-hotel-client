@@ -1,3 +1,4 @@
+import axios from "axios";
 import moment from "moment";
 import { useState } from "react";
 import { FaMapPin } from "react-icons/fa6";
@@ -21,6 +22,12 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
         if (daysDifference > 1) {
             handleDelete(_id);
             //   console.log('2 days later'); // fromDate is more than 2 days later than today
+
+            //availability true (open room)
+            axios.put(`http://localhost:5000/updateconfirm/${roomId}`, {
+                available: true
+            })
+                .then(res => console.log(res.data))
 
         } else {
             Swal.fire({

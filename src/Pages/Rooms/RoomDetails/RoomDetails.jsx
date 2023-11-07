@@ -10,7 +10,7 @@ import axios from 'axios';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
-    const [available, setAvailable] = useState([]);
+    const [roomBook, setRoomBook] = useState([]);
     const [fromDate, setFormDate] = useState("");
     const [toDate, setToDate] = useState("");
 
@@ -24,9 +24,9 @@ const RoomDetails = () => {
         recommend,
         short_title,
         description,
-        availability,
-        amenities } = room;
-
+        available
+        } = room;
+console.log(available);
     const filterByDate = (dates) => {
         // console.log(new Date(dates[1].$d).toLocaleDateString());
 
@@ -52,10 +52,10 @@ const RoomDetails = () => {
     // console.log(fromDate, "-->", toDate);
 
 
-    axios.get(`http://localhost:5000/mybookings/${_id}`)
-        .then(res => setAvailable(res.data))
+    // axios.get(`http://localhost:5000/rooms/${_id}`)
+    //     .then(res => setRoomBook(res.data))
 
-    console.log(available);
+    console.log(roomBook);
     return (
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
@@ -84,14 +84,14 @@ const RoomDetails = () => {
                             <div>
 
                                 {
-                                    // available ?
+                                    available ?
                                         toDate ?
                                             <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
                                                 <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
                                             </Link>
                                             : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
-                                        // :
-                                        // <p>nooo</p>
+                                        :
+                                        <button className='btn w-full btn-error border-none rounded-none  -mt-5 mb-10'>Already Booked</button>
                                 }
 
                             </div>
@@ -108,8 +108,6 @@ const RoomDetails = () => {
                                 <p className='text-xl md:flex items-center gap-5'>
                                     <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
                                     {view}</p>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    Available: {availability ? "Yes" : "Sorry"}</p>
                             </div>
                             <div>
                                 <p className='text-md md:flex  leading-7 max-w-xl gap-5'>
