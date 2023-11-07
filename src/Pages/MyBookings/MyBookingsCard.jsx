@@ -12,27 +12,25 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
     const { _id, img, fromDateTime, toDateTime, totalAmount, totalDays, capacity, roomTitle, price, roomId } = booking;
 
 
-//  comparing the date is 1 day before or not 
+    //  comparing the date is 1 day before or not 
     function compareDates(fromDate) {
         const today = moment(); // Get today's date
         const formattedFromDate = moment(fromDate, 'DD-MM-YYYY'); // Parse the provided fromDate
-      console.log(today);
+        //   console.log(today);
         const daysDifference = formattedFromDate.diff(today, 'days'); // Calculate the difference in days
         if (daysDifference > 1) {
             handleDelete(_id);
-        //   console.log('2 days later'); // fromDate is more than 2 days later than today
+            //   console.log('2 days later'); // fromDate is more than 2 days later than today
+
         } else {
             Swal.fire({
                 icon: "error",
                 title: "Oops...sorry",
                 text: "Can't delete before one day!",
-              });
-        //   console.log('No'); // fromDate is not more than 2 days later than today
+            });
+            //   console.log('No'); // fromDate is not more than 2 days later than today
         }
-      }
-      
-      // Example usage:
-      
+    }
 
 
     return (
@@ -62,7 +60,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
                             </button>
                         </Link>
 
-                        <button onClick={()=>compareDates(fromDateTime)} type="button" className="flex items-center px-2 py-1 pl-1 space-x-1">
+                        <button onClick={() => compareDates(fromDateTime)} type="button" className="flex items-center px-2 py-1 pl-1 space-x-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-4 h-4 fill-current">
                                 <path d="M96,472a23.82,23.82,0,0,0,23.579,24H392.421A23.82,23.82,0,0,0,416,472V152H96Zm32-288H384V464H128Z"></path>
                                 <rect width="32" height="200" x="168" y="216"></rect>
@@ -73,7 +71,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
                             <span>Cancel Room</span>
                         </button>
 
-                        
+
                         <Link to={`/updatebookingdate/${_id}`}>
                             <button type="button" className="flex items-center px-2 py-1 space-x-1">
 

@@ -6,10 +6,11 @@ import DatePickerCalender from '../../../SharedComponents/DatePicker/DatePickerC
 import { useState } from 'react';
 import moment from 'moment/moment';
 import { DatePicker, Space } from 'antd';
+import axios from 'axios';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
-
+    const [available, setAvailable] = useState([]);
     const [fromDate, setFormDate] = useState("");
     const [toDate, setToDate] = useState("");
 
@@ -28,7 +29,7 @@ const RoomDetails = () => {
 
     const filterByDate = (dates) => {
         // console.log(new Date(dates[1].$d).toLocaleDateString());
-       
+
         // const fromDateFormatted = moment(dates[0]).format('DD-MM-YYYY');
         // const toDateFormatted = moment(dates[1]).format('DD-MM-YYYY');
         // console.log(fromDateFormatted);
@@ -48,10 +49,13 @@ const RoomDetails = () => {
         setFormDate(formattedFromDate);
         setToDate(formattedToDate);
     }
-    console.log(fromDate, "-->", toDate);
+    // console.log(fromDate, "-->", toDate);
 
 
+    axios.get(`http://localhost:5000/mybookings/${_id}`)
+        .then(res => setAvailable(res.data))
 
+    console.log(available);
     return (
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
@@ -63,7 +67,7 @@ const RoomDetails = () => {
                         <div className="space-y-2 max-w-xl mt-10" >
                             <a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">{short_title}</a>
                             <p className="text-xs dark:text-gray-400">
-                                <p  className="text-lg">{description}</p>
+                                <p className="text-lg">{description}</p>
                             </p>
                         </div>
                         <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
@@ -80,11 +84,14 @@ const RoomDetails = () => {
                             <div>
 
                                 {
-                                    toDate ?
-                                        <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
-                                            <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
-                                        </Link>
-                                        : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
+                                    // available ?
+                                        toDate ?
+                                            <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
+                                                <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
+                                            </Link>
+                                            : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
+                                        // :
+                                        // <p>nooo</p>
                                 }
 
                             </div>

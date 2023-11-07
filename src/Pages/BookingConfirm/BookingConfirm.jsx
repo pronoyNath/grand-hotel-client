@@ -45,6 +45,14 @@ const BookingConfirm = () => {
         const formattedToDateTime = toDateTime.format('DD-MM-YYYY');
         // console.log(formattedFromDateTime,formattedToDateTime);
         
+        
+        axios.put(`http://localhost:5000/rooms/${_id}`,{
+            available: false
+        })
+        .then(res=>console.log("put holo",res.data))
+
+
+
         // useEffect(() => {
             axios.post('http://localhost:5000/bookingconfirm', {
                 fromDateTime: formattedFromDateTime,
@@ -73,13 +81,6 @@ const BookingConfirm = () => {
     
     }
    
-    // useEffect(()=>{
-    //     axios.post('http://localhost:5000/rooms',
-    //     {avilability: false}
-    //     .then(data=>console.log(data))
-    //     .catch(err=>console.log(err))
-    //     )
-    // },[])
 
 
 
@@ -112,8 +113,6 @@ const BookingConfirm = () => {
                                 <p className='text-xl md:flex items-center gap-5'>
                                     <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
                                     {view}</p>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    Available: {availability ? "Yes" : "Sorry"}</p>
                             </div>
                             <div>
                                 <p className='text-md md:flex  leading-7 max-w-xl gap-5'>

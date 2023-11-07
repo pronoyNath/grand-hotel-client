@@ -1,5 +1,5 @@
 import axios from 'axios';
-import  { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyBookingsCard from './MyBookingsCard';
 
@@ -20,6 +20,8 @@ const MyBookings = () => {
 
     const handleDelete = (id) => {
 
+
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -33,22 +35,27 @@ const MyBookings = () => {
                 fetch(`http://localhost:5000/bookingconfirm/${id}`, {
                     method: 'DELETE'
                 })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        Swal.fire(
-                            'Cancelled!',
-                            'Room has been cancelled.',
-                            'success'
-                        )
-                        const remaining = bookingList.filter(product => product._id !== id)
-                        setBookingList(remaining)
-                    }
-                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Cancelled!',
+                                'Room has been cancelled.',
+                                'success'
+                            )
+
+
+
+
+
+                            const remaining = bookingList.filter(product => product._id !== id)
+                            setBookingList(remaining)
+                        }
+                    })
             }
         });
     }
- 
+
 
     return (
         <div className='dark:bg-gray-900  pt-32'>
