@@ -3,6 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyBookingsCard from './MyBookingsCard';
 
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+
 const MyBookings = () => {
     const [bookingList, setBookingList] = useState([]);
     const { user } = useContext(AuthContext);
@@ -15,6 +18,62 @@ const MyBookings = () => {
     }, [url]);
 
 
+    const handleDelete = (id) => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, cancel it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/bookingconfirm/${id}`, {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Cancelled!',
+                            'Room has been cancelled.',
+                            'success'
+                        )
+                        const remaining = bookingList.filter(product => product._id !== id)
+                        setBookingList(remaining)
+                    }
+                })
+            }
+        });
+    }
+
+    
+    // const handleUpdate = (id) => {
+    //     fetch(`http://localhost:5000/bookingconfirm/${id}`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             'content-type': "application/json"
+    //         },
+    //         body: JSON.stringify(updateDate)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             if (data.modifiedCount > 0) {
+    //                 alert("Updated successfully")
+    //                 const remaining = booking.filter(booking => booking._id !== id)
+    //                 const updated = booking.find(booking=> booking._id === id)
+    //                 updated.status = 'confirm'
+    //                 const newBookings =[updated,...remaining]
+    //                 setBookingList(newBookings);
+    //             }
+    //         })
+    // }
+ 
+
+
 
     return (
         <div className='dark:bg-gray-900  pt-32'>
@@ -22,7 +81,11 @@ const MyBookings = () => {
                 <h2 className="text-3xl font-semibold">My Rooms</h2>
                 <ul className="flex flex-col divide-y divide-gray-700">
                     {
-                        bookingList?.map(booking => <MyBookingsCard key={booking._id} booking={booking}></MyBookingsCard>)
+                        bookingList?.map(booking => <MyBookingsCard
+                            key={booking._id}
+                            booking={booking}
+                            handleDelete={handleDelete}
+                        ></MyBookingsCard>)
                     }
                 </ul>
                 <div className="space-y-1 text-right" >

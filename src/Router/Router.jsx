@@ -11,6 +11,7 @@ import Testimonial from "../Components/Testimonial/Testimonial";
 import HomeSlider from "../Pages/Home/Banner/HomeSlider/HomeSlider";
 import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import BookingConfirm from "../Pages/BookingConfirm/BookingConfirm";
+import UpdateBookingDate from "../Pages/UpdateBookingDate/UpdateBookingDate";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
                 path: '/bookingconfirm/:id/:fromdate/:todate',
                 element: <BookingConfirm></BookingConfirm>,
                 loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: `/updatebookingdate/:id`,
+                element: <UpdateBookingDate></UpdateBookingDate>,
+                loader: ({params})=>fetch(`http://localhost:5000/updatebookingdate/${params.id}`)
             }
         ]
     }

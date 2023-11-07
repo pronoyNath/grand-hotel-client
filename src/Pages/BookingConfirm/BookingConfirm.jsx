@@ -55,7 +55,8 @@ const BookingConfirm = () => {
                 roomId : _id,
                 roomTitle: short_title,
                 capacity,
-                price
+                price,
+                img
             })
             .then(res => 
                 {
