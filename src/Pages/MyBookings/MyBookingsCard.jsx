@@ -1,12 +1,13 @@
 import axios from "axios";
 import moment from "moment";
 import { useState } from "react";
-import { FaMapPin } from "react-icons/fa6";
+import { FaMapPin, FaRegNewspaper } from "react-icons/fa6";
 import { GiAnticlockwiseRotation } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import UserReview from "../../SharedComponents/UserReview/UserReview";
 
 const MyBookingsCard = ({ booking, handleDelete }) => {
     // console.log(Object.keys(booking).join(","));
@@ -39,6 +40,25 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
         }
     }
 
+
+    const [rating, setRating] = useState(0);
+    const handleRatingChange = (event) => {
+        setRating(parseInt(event.target.value, 10));
+      };
+console.log(rating);
+
+    const handleReview = (e)=>{
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const username = form.get('username');
+        const comment = form.get('comment');
+        // console.log(username,comment,rating);
+
+        const reviews = {username,comment,rating,roomId}
+        axios.post('http://localhost:5000/reviews',
+        reviews)
+        .then(res=>console.log(res.data))
+    }
 
     return (
         <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
@@ -87,6 +107,28 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
                                 <span>Update Booking Date</span>
                             </button>
                         </Link>
+
+
+                        {/* Open the modal using document.getElementById('ID').showModal() method */}
+                        <button type="button" className="flex items-center px-2 py-1 space-x-1" onClick={() => document.getElementById('my_modal_2').showModal()}>
+                            <span className="mr-1"><FaRegNewspaper></FaRegNewspaper></span> Give Review
+                        </button>
+                        <dialog id="my_modal_2" className="modal">
+                            <div className="modal-box bg-gray-800">
+                                <h3 className="text-2xl text-center">Feedback</h3>
+                                <UserReview
+                                rating={rating}
+                                setRating={setRating}
+                                handleRatingChange={handleRatingChange}
+                                 handleReview={handleReview}
+                                 ></UserReview>
+                            </div>
+                            <form method="dialog" className="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                        </dialog>
+
+
                     </div>
                 </div>
             </div>

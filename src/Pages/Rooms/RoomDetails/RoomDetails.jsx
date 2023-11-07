@@ -3,16 +3,18 @@ import HomeSlider from '../../Home/Banner/HomeSlider/HomeSlider';
 import { FaBed, FaCloudSun, FaPeopleLine } from 'react-icons/fa6';
 import { ImInsertTemplate } from "react-icons/im";
 import DatePickerCalender from '../../../SharedComponents/DatePicker/DatePickerCalender';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import moment from 'moment/moment';
 import { DatePicker, Space } from 'antd';
 import axios from 'axios';
+import ShowReviews from '../ShowReviews/ShowReviews';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
     const [roomBook, setRoomBook] = useState([]);
     const [fromDate, setFormDate] = useState("");
     const [toDate, setToDate] = useState("");
+    const [reviews, setReviews] = useState([]);
 
     const room = useLoaderData();
     const { _id, img,
@@ -25,8 +27,10 @@ const RoomDetails = () => {
         short_title,
         description,
         available
-        } = room;
-console.log(available);
+    } = room;
+
+
+
     const filterByDate = (dates) => {
         // console.log(new Date(dates[1].$d).toLocaleDateString());
 
@@ -51,11 +55,17 @@ console.log(available);
     }
     // console.log(fromDate, "-->", toDate);
 
+    // fetching review data 
+    // axios.get(`http://localhost:5000/reviews/${_id}`)
+    // .then(res => setReviews(res.data))
 
-    // axios.get(`http://localhost:5000/rooms/${_id}`)
-    //     .then(res => setRoomBook(res.data))
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews/${_id}`)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
 
-    console.log(roomBook);
+    console.log(reviews);
     return (
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
@@ -69,6 +79,15 @@ console.log(available);
                             <p className="text-xs dark:text-gray-400">
                                 <p className="text-lg">{description}</p>
                             </p>
+
+                            <h3 className='text-3xl text-center pt-10'>Reviews</h3>
+                            
+
+                                {
+                                    reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
+                                }
+
+
                         </div>
                         <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
                             <p className='text-md -mb-10'>Form,</p>

@@ -30,14 +30,6 @@ export default function HomeSlider({ room }) {
         ))}
 
 
-
-        {/* <SwiperSlide>
-            <img src="https://hotellerv1.b-cdn.net/apartment/wp-content/uploads/sites/5/2018/06/a-black-and-white-bachelor-pad-in-brooklyn-home-tour-lonny-for-brownstone-apartment-designer-dan-mazzarini-melded-historic-architecture-modern-masculine_hotel-interior-black-and-white_hotel_hotel-desi-1024x683.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="https://hotellerv1.b-cdn.net/apartment/wp-content/uploads/sites/5/2018/06/a-black-and-white-bachelor-pad-in-brooklyn-home-tour-lonny-for-brownstone-apartment-designer-dan-mazzarini-melded-historic-architecture-modern-masculine_hotel-interior-black-and-white_hotel_hotel-desi-1024x683.jpg" alt="" />
-        </SwiperSlide> */}
-
       </Swiper>
     </>
   );
