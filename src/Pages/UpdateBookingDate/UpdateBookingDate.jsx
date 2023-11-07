@@ -3,6 +3,8 @@ import { DatePicker, Space } from 'antd';
 import { FaRightLong } from 'react-icons/fa6';
 import { useParams } from 'react-router-dom';
 const { RangePicker } = DatePicker;
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const UpdateBookingDate = () => {
     const {id} = useParams();
@@ -39,13 +41,13 @@ const UpdateBookingDate = () => {
             .then(data => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
-                    alert("updated")
-                    // alert("Updated successfully")
-                    // const remaining = booking.filter(booking => booking._id !== id)
-                    // const updated = booking.find(booking=> booking._id === id)
-                    // updated.status = 'confirm'
-                    // const newBookings =[updated,...remaining]
-                    // setBookingList(newBookings);
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "Booking Date Updated",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
                 }
             })
     }
