@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyBookingsCard from './MyBookingsCard';
 
@@ -48,32 +48,7 @@ const MyBookings = () => {
             }
         });
     }
-
-    
-    // const handleUpdate = (id) => {
-    //     fetch(`http://localhost:5000/bookingconfirm/${id}`, {
-    //         method: 'PATCH',
-    //         headers: {
-    //             'content-type': "application/json"
-    //         },
-    //         body: JSON.stringify(updateDate)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             if (data.modifiedCount > 0) {
-    //                 alert("Updated successfully")
-    //                 const remaining = booking.filter(booking => booking._id !== id)
-    //                 const updated = booking.find(booking=> booking._id === id)
-    //                 updated.status = 'confirm'
-    //                 const newBookings =[updated,...remaining]
-    //                 setBookingList(newBookings);
-    //             }
-    //         })
-    // }
  
-
-
 
     return (
         <div className='dark:bg-gray-900  pt-32'>

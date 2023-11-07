@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { DatePicker, Space } from 'antd';
 import { FaRightLong } from 'react-icons/fa6';
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 const { RangePicker } = DatePicker;
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
@@ -23,11 +23,11 @@ const UpdateBookingDate = () => {
         setFormDate(formattedFromDate);
         setToDate(formattedToDate);
     }
-    console.log(fromDate, toDate);
+    // console.log(fromDate, toDate);
 
 
     const updateDate = { fromDate, toDate };
-    console.log(updateDate);
+    // console.log(updateDate);
 
     const handleUpdate = (id) => {
         fetch(`http://localhost:5000/bookingconfirm/${id}`, {
@@ -65,9 +65,14 @@ const UpdateBookingDate = () => {
                     <RangePicker format='DD-MM-YYYY' onChange={filterByDate} />
                 </div>
             </div>
-            <div className='text-center my-10 '>
+            {
+                toDate ? <div className='text-center my-10 '>
                 <button onClick={() => handleUpdate(id)} className='btn btn-lg bg-[#dbb878] border-none'>update confirm</button>
+            </div> : <div className='text-center my-10 '>
+                <button className='btn btn-lg bg-[#dbb878] border-none'>select new date</button>
             </div>
+
+            }
         </div>
     );
 };
