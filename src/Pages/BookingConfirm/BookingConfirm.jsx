@@ -7,6 +7,9 @@ import HomeSlider from '../Home/Banner/HomeSlider/HomeSlider';
 import { FaBed, FaCloudSun, FaPeopleLine } from 'react-icons/fa6';
 import { ImInsertTemplate } from 'react-icons/im';
 
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+
 const BookingConfirm = () => {
     const { fromdate, todate } = useParams();
     // console.log(fromdate, todate);
@@ -36,23 +39,39 @@ const BookingConfirm = () => {
     const totalPrice = totalDays * price;
     // console.log(totalPrice);
 
-    useEffect(() => {
+
+    const bookConfirm =()=>{
         const formattedFromDateTime = fromDateTime.format('DD-MM-YYYY');
         const formattedToDateTime = toDateTime.format('DD-MM-YYYY');
-// console.log(formattedFromDateTime,formattedToDateTime);
-
-        axios.post('http://localhost:5000/bookingconfirm', {
-            fromDateTime: formattedFromDateTime,
-            toDateTime: formattedToDateTime,
-            totalAmount: totalPrice,
-            totalDays,
-            userEmail: user?.email,
-            roomId : _id
-        })
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-    }, [fromDateTime, toDateTime, totalPrice, totalDays]);
-
+        // console.log(formattedFromDateTime,formattedToDateTime);
+        
+        // useEffect(() => {
+            axios.post('http://localhost:5000/bookingconfirm', {
+                fromDateTime: formattedFromDateTime,
+                toDateTime: formattedToDateTime,
+                totalAmount: totalPrice,
+                totalDays,
+                userEmail: user?.email,
+                roomId : _id,
+                roomTitle: short_title,
+                capacity,
+                price
+            })
+            .then(res => 
+                {
+                    if(res.data.acknowledged ){
+                        Swal.fire({
+                            title: "Wow",
+                            text: "Room Booked Successfully",
+                            icon: "success"
+                          });
+                    }
+                })
+            .catch(err => console.log(err));
+        // }, [fromDateTime, toDateTime, totalPrice, totalDays]);
+    
+    }
+   
     // useEffect(()=>{
     //     axios.post('http://localhost:5000/rooms',
     //     {avilability: false}
@@ -114,7 +133,7 @@ const BookingConfirm = () => {
                                     {totalPrice} </p>
                                 </div>
                             </div>
-                            <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Confirm Book</button>
+                            <button onClick={bookConfirm} className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Confirm Book</button>
                         </div>
                     </div>
                 </div>

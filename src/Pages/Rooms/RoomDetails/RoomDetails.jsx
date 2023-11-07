@@ -62,13 +62,13 @@ const RoomDetails = () => {
                     <div className="p-6 pb-12 md:flex gap-5 m-4 mx-auto -mt-16 space-y-6 lg:max-w-6xl sm:px-10 sm:mx-12 lg:rounded-md z-40 dark:bg-gray-900" >
                         <div className="space-y-2 max-w-xl mt-10" >
                             <a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">{short_title}</a>
-                            <p className="text-xs dark:text-gray-400">By
-                                <a rel="noopener noreferrer" href="#" className="text-xs hover:underline">{description}</a>
+                            <p className="text-xs dark:text-gray-400">
+                                <p  className="text-lg">{description}</p>
                             </p>
                         </div>
                         <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
-                            <p className='text-md -mb-10'>Form</p>
-                            <p className='text-6xl'>{price}</p>
+                            <p className='text-md -mb-10'>Form,</p>
+                            <p className='text-6xl'>${price}<span className='text-base'>per night</span></p>
                             <div className=' flex items-center justify-center gap-5'>
                                 <div>
                                     <h3 className='text-xl mb-3 text-[#dbb878] font-semibold'>Check in & Check out date:*</h3>
