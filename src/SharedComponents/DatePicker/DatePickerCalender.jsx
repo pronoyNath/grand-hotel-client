@@ -1,8 +1,10 @@
+import { DatePicker, Space } from 'antd';
+const { RangePicker } = DatePicker;
 
-export default function DatePickerCalender() {
+export default function DatePickerCalender({filterByDate}) {
   return (
-    <div>
-        <input type="date" className="bg-gray-800 p-2"/>
+    <div className='text-black'>
+        <RangePicker className='text-left border-[#dbb878]' format={'DD-MM-YY'} onChange={filterByDate}/>
     </div>
   );
 }

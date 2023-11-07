@@ -10,6 +10,7 @@ import Map from "../Components/Map/Map";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import HomeSlider from "../Pages/Home/Banner/HomeSlider/HomeSlider";
 import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
+import BookingConfirm from "../Pages/BookingConfirm/BookingConfirm";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
             {
                 path: '/roomdetails/:id',
                 element: <RoomDetails></RoomDetails>,
+                loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: '/bookingconfirm/:id/:fromdate/:todate',
+                element: <BookingConfirm></BookingConfirm>,
                 loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
             }
         ]
