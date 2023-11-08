@@ -138,7 +138,7 @@ const Login = () => {
             <>
              <PageTitle title={"Login | Grand Hotel"}></PageTitle>
 
-            <div className="hero min-h-[800px]" style={{ backgroundImage: 'url(https://i.ibb.co/4pHc4rw/R.jpg)' }}>
+            <div className="hero min-h-[800px] overflow-x-hidden" style={{ backgroundImage: 'url(https://i.ibb.co/4pHc4rw/R.jpg)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-6xl flex md:gap-10 items-center">
@@ -147,7 +147,7 @@ const Login = () => {
                         <Lottie animationData={loginAnimation}></Lottie>
                     </div>
 
-                    <div className="w-full max-w-md rounded-md shadow sm:p-8 dark:bg-[#1c1c1c] dark:text-gray-100" >
+                    <div className="w-full max-w-md rounded-md shadow p-5 sm:p-8 dark:bg-[#1c1c1c] dark:text-gray-100" >
                         <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
                         <p className="text-sm text-center dark:text-gray-400">Dont have account?
                             <Link to='/register' rel="noopener noreferrer" className="focus:underline hover:underline ml-5 text-[#dbb878]">Sign up here</Link>
