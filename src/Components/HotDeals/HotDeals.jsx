@@ -12,7 +12,7 @@ const HotDeals = () => {
                     <div className="flex items-center mx-auto container justify-center md:justify-between py-2">
                         <div className="">
                             <span>Get up to 50% off your first order + free shipping,&nbsp;</span>
-                            <Link to='/login' rel="noopener noreferrer" className="underline ml-3">sign up</Link>today!
+                            <Link to='/login' rel="noopener noreferrer" className="underline ml-3 mr-3">sign up</Link>today!
                         </div>
                         <a href="#" rel="noopener noreferrer" className="items-center gap-2 hidden md:flex">
                             <svg role="img" viewBox="0 0 22 22" className="fill-current h-4 w-4">
