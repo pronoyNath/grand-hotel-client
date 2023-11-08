@@ -83,13 +83,15 @@ const RoomDetails = () => {
                                 <p className="text-lg">{description}</p>
                             </p>
 
-                            <h3 className='text-3xl text-center pt-10'>Reviews</h3>
+                          <div className='text-3xl text-center text-[#dbb878] pt-10'>
+                          <h3>Reviews</h3>
+                            <h3>Total Reviews: {reviews.length}</h3>
+                          </div>
                             
-
-                                {
+                                { reviews.length ?
                                     reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
+                                    : <h3 className='text-lg text-center'> your experience by leaving a review or feedback helps us improve and serve you better in the future</h3>
                                 }
-
 
                         </div>
                         <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
