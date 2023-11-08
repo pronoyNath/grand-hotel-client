@@ -9,7 +9,7 @@ import WhyOurHotel from "./WhyOurHotel/WhyOurHotel";
 
 const Home = () => {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <PageTitle title={"Home | Grand Hotel"}></PageTitle>
             {/* <HomeSlider></HomeSlider> */}
             <Banner></Banner>
