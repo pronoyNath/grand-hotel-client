@@ -10,7 +10,7 @@ const MyBookings = () => {
     const [bookingList, setBookingList] = useState([]);
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/mybookings?email=${user?.email}`;
+    const url = `https://grand-hotel-sand.vercel.app/mybookings?email=${user?.email}`;
     useEffect(() => {
         axios.get(url, { withCredentials: true })
             .then(res => setBookingList(res.data))
@@ -32,7 +32,7 @@ const MyBookings = () => {
             confirmButtonText: "Yes, cancel it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookingconfirm/${id}`, {
+                fetch(`https://grand-hotel-sand.vercel.app/bookingconfirm/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -58,7 +58,7 @@ const MyBookings = () => {
         <div className='dark:bg-gray-900  pt-32'>
             <div className="flex flex-col max-w-6xl mx-auto p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100" >
                 <h2 className="text-3xl font-semibold">My Rooms</h2>
-               
+
                 <ul className="flex flex-col divide-y divide-gray-700">
                     {
                         bookingList?.map(booking => <MyBookingsCard

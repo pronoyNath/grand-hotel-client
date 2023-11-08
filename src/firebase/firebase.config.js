@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAbPUhCR7dcirhaLfb-tGSW4iI80I5pWtA",
-  authDomain: "grand-hotel-daa65.firebaseapp.com",
-  projectId: "grand-hotel-daa65",
-  storageBucket: "grand-hotel-daa65.appspot.com",
-  messagingSenderId: "944337607076",
-  appId: "1:944337607076:web:c1fa436359c558a10ec931"
+  apiKey:import.meta.env.VITE_APIKE,
+  authDomain:import.meta.env.VITE_AUTHDOMAI,
+  projectId:import.meta.env.VITE_PROJECTI,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKE,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERI,
+  appId:import.meta.env.VITE_APPI,
 };
 
 // Initialize Firebase

@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         path: '/',
         element: <MainLayout></MainLayout>,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 path: '/',
                 element: <Home></Home>
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: '/rooms',
                 element: <Rooms></Rooms>,
-                loader: ()=>fetch('http://localhost:5000/rooms')
+                loader: () => fetch('https://grand-hotel-sand.vercel.app/rooms')
             },
             {
                 path: '/mybookings',
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/testimonial',
-                element:<Testimonial></Testimonial>
+                element: <Testimonial></Testimonial>
             },
             {
                 path: '/login',
@@ -53,17 +53,17 @@ const router = createBrowserRouter([
             {
                 path: '/roomdetails/:id',
                 element: <RoomDetails></RoomDetails>,
-                loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`https://grand-hotel-sand.vercel.app/rooms/${params.id}`)
             },
             {
                 path: '/bookingconfirm/:id/:fromdate/:todate',
                 element: <BookingConfirm></BookingConfirm>,
-                loader: ({params})=>fetch(`http://localhost:5000/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`https://grand-hotel-sand.vercel.app/rooms/${params.id}`)
             },
             {
                 path: `/updatebookingdate/:id`,
                 element: <UpdateBookingDate></UpdateBookingDate>,
-                loader: ({params})=>fetch(`http://localhost:5000/updatebookingdate/${params.id}`)
+                loader: ({ params }) => fetch(`https://grand-hotel-sand.vercel.app/updatebookingdate/${params.id}`)
             }
         ]
     }

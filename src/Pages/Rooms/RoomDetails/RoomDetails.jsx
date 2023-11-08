@@ -12,7 +12,7 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const [roomBook, setRoomBook] = useState([]);
     const [fromDate, setFormDate] = useState("");
@@ -59,11 +59,11 @@ const RoomDetails = () => {
     // console.log(fromDate, "-->", toDate);
 
     // fetching review data 
-    // axios.get(`http://localhost:5000/reviews/${_id}`)
+    // axios.get(`https://grand-hotel-sand.vercel.app/reviews/${_id}`)
     // .then(res => setReviews(res.data))
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${_id}`)
+        fetch(`https://grand-hotel-sand.vercel.app/reviews/${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -83,15 +83,15 @@ const RoomDetails = () => {
                                 <p className="text-lg">{description}</p>
                             </p>
 
-                          <div className='text-3xl text-center text-[#dbb878] pt-10'>
-                          <h3>Reviews</h3>
-                            <h3>Total Reviews: {reviews.length}</h3>
-                          </div>
-                            
-                                { reviews.length ?
-                                    reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
-                                    : <h3 className='text-lg text-center'> your experience by leaving a review or feedback helps us improve and serve you better in the future</h3>
-                                }
+                            <div className='text-3xl text-center text-[#dbb878] pt-10'>
+                                <h3>Reviews</h3>
+                                <h3>Total Reviews: {reviews.length}</h3>
+                            </div>
+
+                            {reviews.length ?
+                                reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
+                                : <h3 className='text-lg text-center'> your experience by leaving a review or feedback helps us improve and serve you better in the future</h3>
+                            }
 
                         </div>
                         <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
@@ -107,7 +107,7 @@ const RoomDetails = () => {
                             </div>
                             <div>
 
-                                { user ?
+                                {user ?
                                     available ?
                                         toDate ?
                                             <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
@@ -117,7 +117,7 @@ const RoomDetails = () => {
                                         :
                                         <button className='btn w-full btn-error border-none rounded-none  -mt-5 mb-10'>Already Booked</button>
 
-                                        :  <Link to={`/login`}>
+                                    : <Link to={`/login`}>
                                         <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
                                     </Link>
                                 }

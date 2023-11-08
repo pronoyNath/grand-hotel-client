@@ -25,7 +25,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
             //   console.log('2 days later'); // fromDate is more than 2 days later than today
 
             //availability true (open room)
-            axios.put(`http://localhost:5000/updateconfirm/${roomId}`, {
+            axios.put(`https://grand-hotel-sand.vercel.app/updateconfirm/${roomId}`, {
                 available: true
             })
                 .then(res => console.log(res.data))
@@ -58,7 +58,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
         const formattedDate = date.format('MMMM Do YYYY, h:mm:ss a');
 
         const reviews = { username, comment, rating, roomId, formattedDate }
-        axios.post('http://localhost:5000/reviews',
+        axios.post('https://grand-hotel-sand.vercel.app/reviews',
             reviews)
             .then(res => console.log(res.data))
     }
