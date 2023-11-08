@@ -35,20 +35,12 @@ const router = createBrowserRouter([
                 element: <PrivateRouter><MyBookings></MyBookings></PrivateRouter>
             },
             {
-                path: '/testimonial',
-                element: <Testimonial></Testimonial>
-            },
-            {
                 path: '/login',
                 element: <Login></Login>
             },
             {
                 path: '/register',
                 element: <Register></Register>
-            },
-            {
-                path: '/slider',
-                element: <HomeSlider></HomeSlider>
             },
             {
                 path: '/roomdetails/:id',

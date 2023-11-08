@@ -9,6 +9,7 @@ import { ImInsertTemplate } from 'react-icons/im';
 
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const BookingConfirm = () => {
     const { fromdate, todate } = useParams();
@@ -23,6 +24,7 @@ const BookingConfirm = () => {
         capacity,
         room_size,
         view,
+        special_offer,
         recommend,
         short_title,
         description,
@@ -84,6 +86,9 @@ const BookingConfirm = () => {
 
 
     return (
+        <>
+                     <PageTitle title={"Booking Confirm | Grand Hotel"}></PageTitle>
+
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
                 <div className="flex flex-col max-w-full mx-auto overflow-hidden rounded" >
@@ -112,6 +117,9 @@ const BookingConfirm = () => {
                                 <p className='text-xl md:flex items-center gap-5'>
                                     <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
                                     {view}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                    <span className='mr-5'>Special Offer:</span>
+                                    {special_offer}</p>
                             </div>
                             <div>
                                 <p className='text-md md:flex  leading-7 max-w-xl gap-5'>
@@ -138,12 +146,7 @@ const BookingConfirm = () => {
                 </div>
             </div>
         </div>
-
-        // <div>
-        //     <p>{fromdate}</p>
-        //     <p>{todate}</p>
-        //     <p>{totalDays}</p>
-        // </div>
+        </>
 
     );
 };

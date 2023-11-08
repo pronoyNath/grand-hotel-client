@@ -1,0 +1,254 @@
+[
+    {
+        "img": [
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg",
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg",
+            "https://i.ibb.co/QCWYXNV/pexels-dada-design-12289353.jpg"
+        ],
+        "price": 198,
+        "bed": "Twin Bed",
+        "capacity": "2 Adults, 1 Child",
+        "room_size": "29m²",
+        "view": "Sea View",
+        "recommend": "Great for Business Trip",
+        "short_title": "Economy Sea View Room",
+        "description": "An economical choice with a sea view, twin beds, and a 29m² space. Perfect for business travelers.",
+        "available": true,
+        "special_offer": "free lunch",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg",
+            "https://i.ibb.co/G3j1Mmp/pexels-pixabay-210265.jpg",
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg"
+        ],
+        "price": 220,
+        "bed": "King Bed",
+        "capacity": "2 Adults, 2 Children",
+        "room_size": "34m²",
+        "view": "Mountain View",
+        "recommend": "Perfect for Relaxation",
+        "short_title": "Mountain Vista Suite",
+        "description": "Experience a luxurious mountain view suite with a king-sized bed and a spacious 34m² area, perfect for relaxation.",
+        "available": true,
+        "special_offer": "no offer",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/G3j1Mmp/pexels-pixabay-210265.jpg",
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg",
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg"
+        ],
+        "price": 210,
+        "bed": "Queen Bed",
+        "capacity": "2 Adults",
+        "room_size": "27m²",
+        "view": "City View",
+        "recommend": "Ideal for City Explorers",
+        "short_title": "Urban Cityscape Room",
+        "description": "A cozy queen bed room with a city view and 27m² of space, ideal for city explorers.",
+        "available": true,
+        "special_offer": "free dinner",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/QCWYXNV/pexels-dada-design-12289353.jpg",
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg",
+            "https://i.ibb.co/G3j1Mmp/pexels-pixabay-210265.jpg"
+        ],
+        "price": 239,
+        "bed": "King Bed",
+        "capacity": "2 Adults",
+        "room_size": "38m²",
+        "view": "Garden View",
+        "recommend": "A Romantic Getaway",
+        "short_title": "Romantic Garden Suite",
+        "description": "Indulge in a romantic garden suite with a king-sized bed, a charming garden view, and a spacious 38m² room, perfect for a romantic getaway.",
+        "available": true,
+        "special_offer": "free breakfast",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/G3j1Mmp/pexels-pixabay-210265.jpg",
+            "https://i.ibb.co/Ln3RkQC/pexels-pixabay-237371.jpg",
+            "https://i.ibb.co/QCWYXNV/pexels-dada-design-12289353.jpg"
+        ],
+        "price": 195,
+        "bed": "Twin Bed",
+        "capacity": "2 Adults",
+        "room_size": "31m²",
+        "view": "Lake View",
+        "recommend": "Great for Family Getaways",
+        "short_title": "Lakeside Retreat",
+        "description": "Enjoy the tranquility of our lakeside retreat with twin beds, a serene lake view, and 31m² of space, great for family getaways.",
+        "available": true,
+        "special_offer": "no offer",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/Ln3RkQC/pexels-pixabay-237371.jpg",
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg",
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg"
+        ],
+        "price": 205,
+        "bed": "Queen Bed",
+        "capacity": "2 Adults, 1 Child",
+        "room_size": "28m²",
+        "view": "Sea View",
+        "recommend": "Great for Business Trip",
+        "short_title": "Business Class Sea View",
+        "description": "A comfortable sea view room with a queen-sized bed and 28m² of space, ideal for business travelers.",
+        "available": true,
+        "special_offer": "free lunch",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/TgZ6gdn/140127103345-peninsula-shanghai-deluxe-mock-up.jpg",
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg",
+            "https://www.wivenhoehouse.co.uk/wp-content/uploads/2021/11/1500x1000-Exclusive-02.jpeg"
+        ],
+        "price": 209,
+        "bed": "King Bed",
+        "capacity": "2 Adults",
+        "room_size": "33m²",
+        "view": "Mountain View",
+        "recommend": "Perfect for Relaxation",
+        "short_title": "Mountain Hideaway",
+        "description": "An inviting mountain view room with a king-sized bed and 33m² of space, perfect for relaxation.",
+        "available": true,
+        "special_offer": "free breakfast",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg",
+            "https://i.ibb.co/TgZ6gdn/140127103345-peninsula-shanghai-deluxe-mock-up.jpg",
+            "https://i.ibb.co/QCWYXNV/pexels-dada-design-12289353.jpg"
+        ],
+        "price": 195,
+        "bed": "Queen Bed",
+        "capacity": "2 Adults",
+        "room_size": "27m²",
+        "view": "City View",
+        "recommend": "Ideal for City Explorers",
+        "short_title": "City View Serenity",
+        "description": "Experience the city vibes with a queen-sized bed and a city view in a 27m² space, ideal for city explorers.",
+        "available": true,
+        "special_offer": "no offer",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    },
+    {
+        "img": [
+            "https://i.ibb.co/QCWYXNV/pexels-dada-design-12289353.jpg",
+            "https://i.ibb.co/YkBznDR/pexels-pixabay-271618.jpg",
+            "https://i.ibb.co/TgZ6gdn/140127103345-peninsula-shanghai-deluxe-mock-up.jpg"
+        ],
+        "price": 225,
+        "bed": "King Bed",
+        "capacity": "2 Adults",
+        "room_size": "36m²",
+        "view": "Garden View",
+        "recommend": "A Romantic Getaway",
+        "short_title": "Enchanted Garden Suite",
+        "description": "Indulge in an enchanted garden suite with a king-sized bed, a charming garden view, and a spacious 36m² room, perfect for a romantic getaway.",
+        "available": true,
+        "special_offer": "no offer",
+        "amenities": [
+            "40-inch Samsung® LED TV",
+            "Electronic safe with charging facility",
+            "iHome™ Bluetooth MP3 Player",
+            "Iron and ironing board",
+            "Mini bar",
+            "Non-smoking",
+            "USB charging station",
+            "Wired and wireless broadband Internet access",
+            "Work desk"
+        ]
+    }
+]

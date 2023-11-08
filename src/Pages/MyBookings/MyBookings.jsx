@@ -5,6 +5,7 @@ import MyBookingsCard from './MyBookingsCard';
 
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const MyBookings = () => {
     const [bookingList, setBookingList] = useState([]);
@@ -55,7 +56,9 @@ const MyBookings = () => {
 
 
     return (
-        <div className='dark:bg-gray-900  pt-32'>
+        <div>
+ <PageTitle title={"My Bookings | Grand Hotel"}></PageTitle>
+<div className='dark:bg-gray-900  pt-32'>
             <div className="flex flex-col max-w-6xl mx-auto p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100" >
                 <h2 className="text-3xl font-semibold">My Rooms</h2>
 
@@ -82,6 +85,7 @@ const MyBookings = () => {
                 </div>
             </div>
 
+        </div>
         </div>
     );
 };

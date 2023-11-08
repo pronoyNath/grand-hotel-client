@@ -2,7 +2,7 @@ import demoPic from '../../../assets/demoPic.jpg'
 
 const Banner = () => {
     return (
-        <div className="hero min-h-[600px] " style={{ backgroundImage: `url(${demoPic})` }}>
+        <div className="hero min-h-[600px] " style={{ backgroundImage: `url(https://i.ibb.co/BrwQm1w/demoPic.jpg)` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

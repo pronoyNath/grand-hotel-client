@@ -5,6 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { FaCircleCheck } from 'react-icons/fa6';
 import registerAnimation from '../../assets/registerAnimation.json'
 import Lottie from 'lottie-react';
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const Register = () => {
 
@@ -90,6 +91,10 @@ const Register = () => {
     }
 
     return (
+        <>
+        
+        <PageTitle title={"Register | Grand Hotel"}></PageTitle>
+
         <div className="hero min-h-[900px]" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
@@ -136,6 +141,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

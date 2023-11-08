@@ -9,6 +9,7 @@ import { DatePicker, Space } from 'antd';
 import axios from 'axios';
 import ShowReviews from '../ShowReviews/ShowReviews';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import PageTitle from '../../../Components/PageTitle/PageTitle';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
@@ -28,6 +29,7 @@ const RoomDetails = () => {
         view,
         recommend,
         short_title,
+        special_offer,
         description,
         available
     } = room;
@@ -70,6 +72,9 @@ const RoomDetails = () => {
 
     // console.log(reviews);
     return (
+        <>
+                     <PageTitle title={"Room Details | Grand Hotel"}></PageTitle>
+
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
                 <div className="flex flex-col max-w-full mx-auto overflow-hidden rounded" >
@@ -136,6 +141,9 @@ const RoomDetails = () => {
                                 <p className='text-xl md:flex items-center gap-5'>
                                     <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
                                     {view}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                    <span className='mr-5'>Special Offer:</span>
+                                    {special_offer}</p>
                             </div>
                             <div>
                                 <p className='text-md md:flex  leading-7 max-w-xl gap-5'>
@@ -148,6 +156,7 @@ const RoomDetails = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

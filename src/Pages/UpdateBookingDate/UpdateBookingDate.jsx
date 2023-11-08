@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 const { RangePicker } = DatePicker;
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+import PageTitle from '../../Components/PageTitle/PageTitle';
 
 const UpdateBookingDate = () => {
     const { id } = useParams();
@@ -55,6 +56,9 @@ const UpdateBookingDate = () => {
 
 
     return (
+        <>
+                     <PageTitle title={"Update Booking | Grand Hotel"}></PageTitle>
+
         <div className=' flex items-center justify-center gap-20 min-h-[700px] bg-gray-800'>
             <h2 className='text-3xl flex gap-5 text-[#dbb878] text-center'>UPDATE BOOKING DATE
                 <FaRightLong></FaRightLong>
@@ -74,6 +78,7 @@ const UpdateBookingDate = () => {
 
             }
         </div>
+        </>
     );
 };
 

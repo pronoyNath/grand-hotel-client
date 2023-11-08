@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaCircleCheck } from "react-icons/fa6";
 import loginAnimation from '../../assets/loginAnimaiton2.json'
 import Lottie from "lottie-react";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 
 const Login = () => {
 
@@ -134,7 +135,10 @@ const Login = () => {
     console.log(user);
 
     return (
-            <div className="hero min-h-[800px]" style={{ backgroundImage: 'url(https://th.bing.com/th/id/R.ce43f7e8e0571c21e762b8924aad874d?rik=Lgf1H0ETLLyrWA&pid=ImgRaw&r=0)' }}>
+            <>
+             <PageTitle title={"Login | Grand Hotel"}></PageTitle>
+
+            <div className="hero min-h-[800px]" style={{ backgroundImage: 'url(https://i.ibb.co/4pHc4rw/R.jpg)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-6xl flex md:gap-10 items-center">
@@ -183,6 +187,7 @@ const Login = () => {
             </div>
             
         </div>
+            </>
     );
 };
 

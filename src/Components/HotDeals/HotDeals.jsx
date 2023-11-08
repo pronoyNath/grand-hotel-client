@@ -43,7 +43,7 @@ const HotDeals = () => {
                                 <h3 className="text-6xl">50%</h3>
                                 <p className="text-xl">ON SELECTED ROOMS</p>
                                 <div className="ml-10">
-                                    <img src="http://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hostel/wp-content/uploads/sites/8/2023/07/towels-768x628.png" alt="" />
+                                    <img src="https://i.ibb.co/89gyWq0/towels-768x628.png" alt="" />
                                 </div>
                             </div>
                         </div>

@@ -4,6 +4,7 @@ import demoPic from '../../assets/demoPic.jpg'
 import RoomCard from './RoomCard'
 import { FaFilterCircleDollar } from "react-icons/fa6";
 import { useState } from "react";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 
 const Rooms = () => {
     const rooms = useLoaderData();
@@ -25,6 +26,7 @@ const Rooms = () => {
 
     return (
         <div>
+             <PageTitle title={"Rooms | Grand Hotel"}></PageTitle>
             <div className="pb-28 pt-44 text-white bg-[#0f172b]">
                 <div className="flex items-center justify-center max-w-6xl mx-auto">
                     <div className="max-w-6xl mx-auto flex-1">
