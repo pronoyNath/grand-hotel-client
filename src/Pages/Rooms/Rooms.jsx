@@ -15,7 +15,7 @@ const Rooms = () => {
         const selectedValue = e.target.value;
       
         if (selectedValue === 'upto') {
-          const filterPrice = rooms.filter((room) => room.price <= 200);
+          const filterPrice = rooms.filter((room) => room.price >= 200);
           setAvailableRoom(filterPrice);
         } else if (selectedValue === 'all') {
           // Show all data

@@ -3,14 +3,17 @@ import HomeSlider from '../../Home/Banner/HomeSlider/HomeSlider';
 import { FaBed, FaCloudSun, FaPeopleLine } from 'react-icons/fa6';
 import { ImInsertTemplate } from "react-icons/im";
 import DatePickerCalender from '../../../SharedComponents/DatePicker/DatePickerCalender';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import moment from 'moment/moment';
 import { DatePicker, Space } from 'antd';
 import axios from 'axios';
 import ShowReviews from '../ShowReviews/ShowReviews';
+import { AuthContext } from '../../../Provider/AuthProvider';
 const { RangePicker } = DatePicker;
 
 const RoomDetails = () => {
+    const {user} = useContext(AuthContext);
+
     const [roomBook, setRoomBook] = useState([]);
     const [fromDate, setFormDate] = useState("");
     const [toDate, setToDate] = useState("");
@@ -102,7 +105,7 @@ const RoomDetails = () => {
                             </div>
                             <div>
 
-                                {
+                                { user ?
                                     available ?
                                         toDate ?
                                             <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
@@ -111,6 +114,10 @@ const RoomDetails = () => {
                                             : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
                                         :
                                         <button className='btn w-full btn-error border-none rounded-none  -mt-5 mb-10'>Already Booked</button>
+
+                                        :  <Link to={`/login`}>
+                                        <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
+                                    </Link>
                                 }
 
                             </div>

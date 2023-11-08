@@ -12,6 +12,7 @@ import HomeSlider from "../Pages/Home/Banner/HomeSlider/HomeSlider";
 import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import BookingConfirm from "../Pages/BookingConfirm/BookingConfirm";
 import UpdateBookingDate from "../Pages/UpdateBookingDate/UpdateBookingDate";
+import PrivateRouter from "./PrivateRouter/PrivateRouter";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mybookings',
-                element: <MyBookings></MyBookings>
+                element: <PrivateRouter><MyBookings></MyBookings></PrivateRouter>
             },
             {
                 path: '/testimonial',
