@@ -34,8 +34,8 @@ const Rooms = () => {
                         <h3 className='text-xl ml-5 lg:ml-0 md:text-4xl font-semibold'>Our Rooms</h3>
                         <p className="text-base ml-5 lg:ml-0 lg:text-xl font-medium">Unwind the clock of modern life. Unlock the door to a wonder of the world.</p>
                     </div>
-                    <div className="text-black mr-8 ml-5 lg:ml-0 flex gap-5 items-center ">
-                        <div className="text-3xl text-[#dbb878]"><FaFilterCircleDollar></FaFilterCircleDollar></div>
+                    <div className="text-black mr-8 ml-5 lg:ml-0 flex gap-5 items-center justify-center">
+                        <div className="text-3xl mt-2 lg:mt-0 text-[#dbb878]"><FaFilterCircleDollar></FaFilterCircleDollar></div>
 
                         <select onChange={handleFilter} className="rounded p-2 ml-5 lg:ml-0 mt-5 lg:mt-0 bg-[#dbb878] text-lg lg:text-xl" name="filter" id="filter">
                             <option  value="all">All</option>

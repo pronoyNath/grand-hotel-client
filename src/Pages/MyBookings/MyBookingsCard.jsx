@@ -103,7 +103,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
 
 
                         <Link to={`/updatebookingdate/${_id}`}>
-                            <button type="button" className="flex items-center px-2 py-1 space-x-1">
+                            <button type="button" className="flex items-center px-2 py-1 space-x-1 text-lg lg:text-xl">
 
 
                                 <GiAnticlockwiseRotation></GiAnticlockwiseRotation>
