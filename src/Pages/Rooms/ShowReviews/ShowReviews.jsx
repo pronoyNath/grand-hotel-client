@@ -1,7 +1,7 @@
-import React from 'react';
+
 
 const ShowReviews = ({ review }) => {
-    const { username, rating, comment } = review;
+    const { username, rating, comment,formattedDate } = review;
     return (
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 my-10 dark:text-gray-100 border-2" >
             <div className="flex justify-between p-4" >
@@ -9,7 +9,7 @@ const ShowReviews = ({ review }) => {
 
                     <div >
                         <h4 className="font-bold">{username}</h4>
-                        <span className="text-xs dark:text-gray-400">2 days ago</span>
+                        <span className="text-xs dark:text-gray-400">{formattedDate}</span>
                     </div>
                 </div>
                 <div className="flex items-center space-x-2 dark:text-yellow-500">

@@ -44,20 +44,23 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
     const [rating, setRating] = useState(0);
     const handleRatingChange = (event) => {
         setRating(parseInt(event.target.value, 10));
-      };
-console.log(rating);
+    };
+    console.log(rating);
 
-    const handleReview = (e)=>{
+    const handleReview = (e) => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const username = form.get('username');
         const comment = form.get('comment');
         // console.log(username,comment,rating);
+        const date = moment(); // Create a moment object for the current date and time
 
-        const reviews = {username,comment,rating,roomId}
+        const formattedDate = date.format('MMMM Do YYYY, h:mm:ss a');
+
+        const reviews = { username, comment, rating, roomId, formattedDate }
         axios.post('http://localhost:5000/reviews',
-        reviews)
-        .then(res=>console.log(res.data))
+            reviews)
+            .then(res => console.log(res.data))
     }
 
     return (
@@ -117,11 +120,11 @@ console.log(rating);
                             <div className="modal-box bg-gray-800">
                                 <h3 className="text-2xl text-center">Feedback</h3>
                                 <UserReview
-                                rating={rating}
-                                setRating={setRating}
-                                handleRatingChange={handleRatingChange}
-                                 handleReview={handleReview}
-                                 ></UserReview>
+                                    rating={rating}
+                                    setRating={setRating}
+                                    handleRatingChange={handleRatingChange}
+                                    handleReview={handleReview}
+                                ></UserReview>
                             </div>
                             <form method="dialog" className="modal-backdrop">
                                 <button>close</button>

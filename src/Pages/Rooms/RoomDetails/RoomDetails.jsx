@@ -65,7 +65,7 @@ const RoomDetails = () => {
             .then(data => setReviews(data))
     }, [])
 
-    console.log(reviews);
+    // console.log(reviews);
     return (
         <div className='min-h-[1000px] pt-32 bg-gray-900'>
             <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >

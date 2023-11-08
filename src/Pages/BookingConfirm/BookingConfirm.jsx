@@ -49,7 +49,7 @@ const BookingConfirm = () => {
         axios.put(`http://localhost:5000/rooms/${_id}`,{
             available: false
         })
-        .then(res=>console.log("put holo",res.data))
+        .then(res=>console.log(res.data))
 
 
 
