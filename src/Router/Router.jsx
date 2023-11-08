@@ -13,11 +13,13 @@ import RoomDetails from "../Pages/Rooms/RoomDetails/RoomDetails";
 import BookingConfirm from "../Pages/BookingConfirm/BookingConfirm";
 import UpdateBookingDate from "../Pages/UpdateBookingDate/UpdateBookingDate";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children:[
             {
                 path: '/',
