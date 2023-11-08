@@ -59,12 +59,12 @@ const UpdateBookingDate = () => {
         <>
                      <PageTitle title={"Update Booking | Grand Hotel"}></PageTitle>
 
-        <div className=' flex items-center justify-center gap-20 min-h-[700px] bg-gray-800'>
-            <h2 className='text-3xl flex gap-5 text-[#dbb878] text-center'>UPDATE BOOKING DATE
+        <div className='pt-16 lg:pt-0 lg:flex items-center justify-center gap-20 min-h-[700px] bg-gray-800'>
+            <h2 className='text-xl lg:text-3xl flex gap-5 text-[#dbb878] text-center'>UPDATE BOOKING DATE
                 <FaRightLong></FaRightLong>
             </h2>
             <div className=''>
-                <h3 className='text-xl mb-3 text-[#dbb878] font-semibold'>Check in & Check out date*</h3>
+                <h3 className='text-base lg:text-xl mb-3 text-[#dbb878] font-semibold'>Check in & Check out date*</h3>
                 <div className='text-black'>
                     <RangePicker format='DD-MM-YYYY' onChange={filterByDate} />
                 </div>
@@ -73,7 +73,7 @@ const UpdateBookingDate = () => {
                 toDate ? <div className='text-center my-10 '>
                     <button onClick={() => handleUpdate(id)} className='btn btn-lg bg-[#dbb878] border-none'>update confirm</button>
                 </div> : <div className='text-center my-10 '>
-                    <button className='btn btn-lg bg-[#dbb878] border-none'>select new date</button>
+                    <button className='btn btn-md lg:btn-lg bg-[#dbb878] border-none'>select new date</button>
                 </div>
 
             }

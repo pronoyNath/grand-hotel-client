@@ -62,7 +62,7 @@ const MyBookings = () => {
             <div className="flex flex-col max-w-6xl mx-auto p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100" >
                 <h2 className="text-3xl font-semibold">My Rooms</h2>
 
-                <ul className="flex flex-col divide-y divide-gray-700">
+                <ul className="md:flex flex-col divide-y divide-gray-700">
                     {
                         bookingList?.map(booking => <MyBookingsCard
                             key={booking._id}

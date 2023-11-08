@@ -68,7 +68,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
             <div className="flex w-full space-x-2 sm:space-x-4" >
                 <img className="flex-shrink-0 object-cover w-32 h-32 dark:border-transparent rounded outline-none sm:w-32 sm:h-32 dark:bg-gray-500" src={img?.[0]} alt="" />
                 <div className="flex flex-col justify-between w-full pb-4" >
-                    <div className="flex justify-between w-full pb-2 space-x-2" >
+                    <div className="md:flex justify-between w-full pb-2 space-x-2" >
                         <div className="space-y-1" >
                             <h3 className="text-lg font-semibold leadi sm:pr-8">{roomTitle}</h3>
                             <p className="text-base dark:text-gray-400">Capacity: {capacity}</p>
@@ -82,7 +82,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
 
                         </div>
                     </div>
-                    <div className="flex text-[#dbb878] divide-x text-xl" >
+                    <div className="md:flex text-[#dbb878] divide-x text-xl" >
                         <Link to={`/roomdetails/${roomId}`}>
                             <button type="button" className="flex items-center px-2 py-1 pl-0 space-x-1">
                                 <FaMapPin></FaMapPin>
