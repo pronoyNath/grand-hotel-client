@@ -20,7 +20,7 @@ const MyBookingsCard = ({ booking, handleDelete }) => {
         const formattedFromDate = moment(fromDate, 'DD-MM-YYYY'); // Parse the provided fromDate
         //   console.log(today);
         const daysDifference = formattedFromDate.diff(today, 'days'); // Calculate the difference in days
-        if (daysDifference > 1) {
+        if (daysDifference >= 1) {
             handleDelete(_id);
             //   console.log('2 days later'); // fromDate is more than 2 days later than today
 
