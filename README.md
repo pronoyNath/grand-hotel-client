@@ -2,7 +2,7 @@
 
 ## Website Live Link
 
-[Grand Hotel Website](https://grand-hotel-daa65.web.app)
+[Grand Hotel Website](https://grand-hotel-000.netlify.app)
 
 ## Overview
 
@@ -60,10 +60,6 @@ Welcome to the Grand Hotel website, a visually captivating and feature-rich plat
 
 - **404 Page**
   - A custom 404 page is created with an exciting image/gif and a "Back to home" button to redirect users to the home page.
-
-## Installation and Setup
-
-Please refer to the project's documentation and code for installation and setup instructions.
 
 ## Feedback and Contributions
 

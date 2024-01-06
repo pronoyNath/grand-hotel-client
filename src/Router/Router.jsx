@@ -14,6 +14,13 @@ import BookingConfirm from "../Pages/BookingConfirm/BookingConfirm";
 import UpdateBookingDate from "../Pages/UpdateBookingDate/UpdateBookingDate";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import AddRoom from "../Pages/Dashboard/AddRoom/AddRoom";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import MyListing from "../Pages/Dashboard/MyListing/MyListing";
+import HostRoute from "./HostRoute";
+import ManageUser from "../Pages/Dashboard/ManageUser/ManageUser";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +41,7 @@ const router = createBrowserRouter([
                 path: '/mybookings',
                 element: <PrivateRouter><MyBookings></MyBookings></PrivateRouter>
             },
+
             {
                 path: '/login',
                 element: <Login></Login>
@@ -44,7 +52,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/roomdetails/:id',
-                element: <RoomDetails></RoomDetails>,
+                element: <PrivateRouter><RoomDetails></RoomDetails></PrivateRouter>,
                 loader: ({ params }) => fetch(`https://grand-hotel-sand.vercel.app/rooms/${params.id}`)
             },
             {
@@ -56,9 +64,27 @@ const router = createBrowserRouter([
                 path: `/updatebookingdate/:id`,
                 element: <UpdateBookingDate></UpdateBookingDate>,
                 loader: ({ params }) => fetch(`https://grand-hotel-sand.vercel.app/updatebookingdate/${params.id}`)
-            }
+            },
+            // {
+            //     path: '/dashboard',
+            //     element: <PrivateRouter><DashboardLayout></DashboardLayout></PrivateRouter>,
+            //     children: ([
+            //         {
+            //             path: '/dashboard/add-room',
+            //             element: <PrivateRouter><HostRoute><AddRoom></AddRoom></HostRoute></PrivateRouter>
+            //         },
+            //         {
+            //             path: '/dashboard/my-listing',
+            //             element: <MyListing></MyListing>
+            //         },
+            //         {
+            //             path: '/dashboard/manage-user',
+            //             element: <PrivateRouter><AdminRoute><ManageUser></ManageUser></AdminRoute></PrivateRouter>
+            //         }
+            //     ])
+            // },
         ]
-    }
+    },
 ])
 
 export default router;

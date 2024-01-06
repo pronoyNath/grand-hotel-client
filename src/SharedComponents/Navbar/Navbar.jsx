@@ -9,7 +9,7 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li className="text-2xl">
+        <li className="text-xl">
             <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -20,7 +20,7 @@ const Navbar = () => {
             </NavLink>
         </li>
 
-        <li className="text-2xl">
+        <li className="text-xl">
             <NavLink
                 to="/rooms"
                 className={({ isActive}) =>
@@ -31,21 +31,35 @@ const Navbar = () => {
             </NavLink>
         </li>
 
-        <li className="text-2xl">
+       {
+        user &&  <li className="text-xl">
+        <NavLink
+            to="/mybookings"
+            className={({ isActive }) =>
+                 isActive ? "active px-2 py-1 rounded flex items-center border-b-4 border-[#dbb878] " : ""
+            }
+        >
+            My Bookings
+        </NavLink>
+    </li>
+       }
+        {/* {
+            user && <li className="text-xl">
             <NavLink
-                to="/mybookings"
+                to="/dashboard"
                 className={({ isActive }) =>
                      isActive ? "active px-2 py-1 rounded flex items-center border-b-4 border-[#dbb878] " : ""
                 }
             >
-                My Bookings
+                Dashboard
             </NavLink>
         </li>
+        } */}
     </>
 
     return (
         
-            <div className="navbar max-w-6xl mx-auto text-white">
+            <div className="navbar max-w-6xl mx-auto text-white z-50">
                 <div className="navbar-start">
                     <div className="dropdown z-40">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

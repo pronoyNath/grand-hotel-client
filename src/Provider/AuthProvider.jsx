@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
 
     const createUser = (email, password) => {
         setLoading(true);
-        return createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(auth, email, password)
     }
     const signIn = (email, password) => {
         setLoading(true);
@@ -59,11 +59,11 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             setLoading(false);
 
-            // token creator(***) & remover
+            // token creator(***) & remover(server side)
             if (currentUser) {
                 axios.post('https://grand-hotel-sand.vercel.app/jwt', loggedUser, { withCredentials: true })
                     .then(res => {
-                        // console.log(res.data);
+                        console.log(res.data);
                     })
             }
             else {
@@ -82,6 +82,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        setLoading,
         createUser,
         signIn,
         logOut,

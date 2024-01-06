@@ -73,89 +73,89 @@ const RoomDetails = () => {
     // console.log(reviews);
     return (
         <>
-                     <PageTitle title={"Room Details | Grand Hotel"}></PageTitle>
+            <PageTitle title={"Room Details | Grand Hotel"}></PageTitle>
 
-        <div className='min-h-[1000px] pt-32 bg-gray-900'>
-            <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
-                <div className="flex flex-col max-w-full mx-auto overflow-hidden rounded" >
+            <div className='min-h-[1000px] pt-32 bg-gray-900'>
+                <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100" >
+                    <div className="flex flex-col max-w-full mx-auto overflow-hidden rounded" >
 
 
-                    <HomeSlider room={room}></HomeSlider>
-                    <div className="p-6 pb-12 md:flex gap-5 m-4 mx-auto -mt-16 space-y-6 lg:max-w-6xl sm:px-10 sm:mx-12 lg:rounded-md z-40 dark:bg-gray-900" >
-                        <div className="space-y-2 max-w-xl mt-10" >
-                            <a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">{short_title}</a>
-                            <p className="text-xs dark:text-gray-400">
-                                <p className="text-lg">{description}</p>
-                            </p>
+                        <HomeSlider room={room}></HomeSlider>
+                        <div className="p-6 pb-12 md:flex gap-5 m-4 mx-auto -mt-16 space-y-6 lg:max-w-6xl sm:px-10 sm:mx-12 lg:rounded-md z-40 dark:bg-gray-900" >
+                            <div className="space-y-2 max-w-xl mt-10" >
+                                <a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">{short_title}</a>
+                                <p className="text-xs dark:text-gray-400">
+                                    <p className="text-lg">{description}</p>
+                                </p>
 
-                            <div className='text-3xl text-center text-[#dbb878] pt-10'>
-                                <h3>Reviews</h3>
-                                <h3>Total Reviews: {reviews.length}</h3>
-                            </div>
-
-                            {reviews.length ?
-                                reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
-                                : <h3 className='text-lg text-center'> your experience by leaving a review or feedback helps us improve and serve you better in the future</h3>
-                            }
-
-                        </div>
-                        <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
-                            <p className='text-md -mb-10'>Form,</p>
-                            <p className='text-6xl'>${price}<span className='text-base'>per night</span></p>
-                            <div className=' flex items-center justify-center gap-5'>
-                                <div>
-                                    <h3 className='text-xl mb-3 text-[#dbb878] font-semibold'>Check in & Check out date:*</h3>
-                                    <div className='text-black'>
-                                        <RangePicker format='DD-MM-YYYY' onChange={filterByDate} />
-                                    </div>
+                                <div className='text-3xl text-center text-[#dbb878] pt-10'>
+                                    <h3>Reviews</h3>
+                                    <h3>Total Reviews: {reviews.length}</h3>
                                 </div>
-                            </div>
-                            <div>
 
-                                {user ?
-                                    available ?
-                                        toDate ?
-                                            <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
-                                                <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
-                                            </Link>
-                                            : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
-                                        :
-                                        <button className='btn w-full btn-error border-none rounded-none  -mt-5 mb-10'>Already Booked</button>
-
-                                    : <Link to={`/login`}>
-                                        <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
-                                    </Link>
+                                {reviews.length ?
+                                    reviews?.map(review => <ShowReviews key={review._id} review={review}></ShowReviews>)
+                                    : <h3 className='text-lg text-center'> your experience by leaving a review or feedback helps us improve and serve you better in the future</h3>
                                 }
 
                             </div>
-                            <div className='space-y-5'>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    <span className='text-5xl'><FaBed></FaBed></span>
-                                    {bed}</p>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    <span className='text-5xl'><FaPeopleLine></FaPeopleLine></span>
-                                    {capacity}</p>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    <span className='text-5xl'><ImInsertTemplate></ImInsertTemplate></span>
-                                    {room_size}</p>
-                                <p className='text-xl md:flex items-center gap-5'>
-                                    <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
-                                    {view}</p>
+                            <div className="dark:text-gray-100 space-y-10  border-t-2 pb-5 md:border-l-2 md:border-t-0 p-5  justify-center items-center" >
+                                <p className='text-md -mb-10'>Form,</p>
+                                <p className='text-6xl'>${price}<span className='text-base'>per night</span></p>
+                                <div className=' flex items-center justify-center gap-5'>
+                                    <div>
+                                        <h3 className='text-xl mb-3 text-[#dbb878] font-semibold'>Check in & Check out date:*</h3>
+                                        <div className='text-black'>
+                                            <RangePicker format='DD-MM-YYYY' onChange={filterByDate} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    {user ?
+                                        available ?
+                                            toDate ?
+                                                <Link to={`/bookingconfirm/${_id}/${fromDate}/${toDate}`}>
+                                                    <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
+                                                </Link>
+                                                : <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Set Checking Date</button>
+                                            :
+                                            <button className='btn w-full btn-error border-none rounded-none  -mt-5 mb-10'>Already Booked</button>
+
+                                        : <Link to={`/login`}>
+                                            <button className='btn w-full bg-[#dbb878] border-none rounded-none  -mt-5 mb-10'>Book Now</button>
+                                        </Link>
+                                    }
+
+                                </div>
+                                <div className='space-y-5'>
                                     <p className='text-xl md:flex items-center gap-5'>
-                                    <span className='mr-5'>Special Offer:</span>
-                                    {special_offer}</p>
-                            </div>
-                            <div>
-                                <p className='text-md md:flex  leading-7 max-w-xl gap-5'>
-                                    <span className='text-lg'> Amenities: </span>
-                                    {room?.amenities?.join(', ')}
-                                </p>
+                                        <span className='text-5xl'><FaBed></FaBed></span>
+                                        {bed}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                        <span className='text-5xl'><FaPeopleLine></FaPeopleLine></span>
+                                        {capacity}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                        <span className='text-5xl'><ImInsertTemplate></ImInsertTemplate></span>
+                                        {room_size}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                        <span className='text-5xl'><FaCloudSun></FaCloudSun></span>
+                                        {view}</p>
+                                    <p className='text-xl md:flex items-center gap-5'>
+                                        <span className='mr-5'>Special Offer:</span>
+                                        {special_offer}</p>
+                                </div>
+                                <div>
+                                    <p className='text-md md:flex  leading-7 max-w-xl gap-5'>
+                                        <span className='text-lg'> Amenities: </span>
+                                        {room?.amenities?.join(', ')}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </>
     );
 };
